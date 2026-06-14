@@ -9,6 +9,7 @@
 		<field id="tv_is_off" type="bool" value="false" onChange="OnTVIsOff" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/Home/Home.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 	<children>
 		<VideoPlayer id="VideoPlayer" />
 		<MainMenu id="MainMenu" />

@@ -5,4 +5,5 @@
 		<field id="search_type" type="integer" value="0" onChange="OnSearchTypeChange" alwaysnotify="true" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/Search/Search.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

@@ -42,7 +42,7 @@ sub Init()
 		}
 		"default": {
 			"fontSize": 48
-			"fontUri": "font:LargeBoldSystemFont"
+			"fontUri": GetChineseFontUri()
 			"color": "#FFFFFFFF"
 		}
 	}
@@ -97,7 +97,7 @@ sub Init()
 		label.height = m.row_height
 		label.translation = [ 10 + 50 + 10, 0 ]
 		label.vertAlign = "center"
-		label.font = "font:LargeBoldSystemFont"
+		label.font = CreateChineseFont( 36 )
 		m.row_title.AppendChild( label )
 
 	m.container.AppendChild( m.row_title )
@@ -124,7 +124,7 @@ sub Init()
 			name_label.height = m.row_height
 			name_label.translation = [ 20, 0 ]
 			name_label.vertAlign = "center"
-			name_label.font = "font:MediumSystemFont"
+			name_label.font = CreateChineseFont( 28 )
 			name_label.repeatCount = 0
 			row.AppendChild( name_label )
 
@@ -134,7 +134,7 @@ sub Init()
 			extra_label.translation = [ 20 + name_label.maxWidth + 20, 0 ]
 			extra_label.horizAlign = "right"
 			extra_label.vertAlign = "center"
-			extra_label.font = "font:MediumSystemFont"
+			extra_label.font = CreateChineseFont( 28 )
 			row.AppendChild( extra_label )
 
 		m.container.AppendChild( row )

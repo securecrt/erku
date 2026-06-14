@@ -25,7 +25,7 @@ sub Init()
 		}
 		"default": {
 			"fontSize": 48
-			"fontUri": "font:LargeBoldSystemFont"
+			"fontUri": GetChineseFontUri()
 			"color": "#FFFFFFFF"
 		}
 	}

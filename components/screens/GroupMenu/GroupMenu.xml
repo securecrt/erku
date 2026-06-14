@@ -10,4 +10,5 @@
 		<field id="enter_group_content" type="node" value="invalid" onChange="OnEnterGroupContentChange" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/GroupMenu/GroupMenu.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

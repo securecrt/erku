@@ -65,7 +65,7 @@ sub Init()
 		m.channel_number.translation = [ 10, 10 ]
 		m.channel_number.vertAlign = "center"
 		m.channel_number.horizAlign = "right"
-		m.channel_number.font = "font:LargeBoldSystemFont"
+		m.channel_number.font = CreateChineseFont( 36 )
 		m.channel_number.text = ""
 		m.channel_number_background.AppendChild( m.channel_number )
 

@@ -25,7 +25,7 @@ sub Init()
 	title.height = 100
 	title.horizAlign = "center"
 	title.vertAlign = "center"
-	title.font = "font:LargeBoldSystemFont"
+	title.font = CreateChineseFont( 36 )
 	title.text = "Search"
 
 	m.panel.AppendChild( title )
@@ -69,7 +69,8 @@ sub Init()
 			"color": "#FFFFFFFF"
 		}
 		"default": {
-			"fontUri": "font:SmallSystemFont"
+			"fontUri": GetChineseFontUri()
+			"fontSize": 24
 			"color": "#FFFFFFFF"
 		}
 	}
@@ -89,7 +90,7 @@ sub Init()
 		label.height = label_height
 		label.translation = [ 20, 20 ]
 		label.vertAlign = "center"
-		label.font = "font:SmallSystemFont"
+		label.font = CreateChineseFont( 24 )
 		label.text = "Search Type:"
 
 	m.options_columns.AppendChild( label )
@@ -210,7 +211,7 @@ sub Init()
 		label.height = label_height
 		label.translation = [ 20, 20 + ( label_height * 2 ) + 20 ]
 		label.vertAlign = "center"
-		label.font = "font:SmallSystemFont"
+		label.font = CreateChineseFont( 24 )
 		label.text = "Search For:"
 
 	m.options_columns.AppendChild( label )
@@ -233,7 +234,7 @@ sub Init()
 			button.height = label_height
 			button.translation = [ 20, 0 ]
 			button.vertAlign = "center"
-			button.font = "font:SmallSystemFont"
+			button.font = CreateChineseFont( 24 )
 			button.maxWidth = option_4.width - 40
 			
 		column_background.width = option_4.width

@@ -11,4 +11,5 @@
 		<field id="reload_content" type="bool" value="false" onChange="OnReloadConent" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/ChannelGuide/ChannelGuide.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

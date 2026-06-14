@@ -80,7 +80,7 @@ sub Init()
 		m.progress_title.height = label_height
 		m.progress_title.vertAlign = "center"
 		m.progress_title.horizAlign = "center"
-		m.progress_title.font = "font:SmallSystemFont"
+		m.progress_title.font = CreateChineseFont( 24 )
 		m.progress_bar.AppendChild( m.progress_title )
 
 		m.progress = CreateObject( "roSGNode", "Poster" )
@@ -103,7 +103,7 @@ sub Init()
 		m.progress_percent.translation = [ 0, label_height + progress_height ]
 		m.progress_percent.vertAlign = "center"
 		m.progress_percent.horizAlign = "center"
-		m.progress_percent.font = "font:SmallSystemFont"
+		m.progress_percent.font = CreateChineseFont( 24 )
 		m.progress_bar.AppendChild( m.progress_percent )
 
 	m.progress_bar.visible = false

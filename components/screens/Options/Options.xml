@@ -4,4 +4,5 @@
 		<field id="menu_state" type="integer" value="-1" alwaysnotify="true" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/Options/Options.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

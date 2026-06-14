@@ -5,4 +5,5 @@
 		<field id="content_index" type="integer" value="-1" alwaysnotify="true" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/MainMenu/MainMenu.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

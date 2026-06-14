@@ -6,4 +6,5 @@
 		<field id="video" type="node" value="invalid" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/VideoPlayer/VideoOptions/VideoOptions.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

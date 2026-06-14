@@ -66,7 +66,7 @@ sub Init()
 		m.program_name = CreateObject( "roSGNode", "ScrollingLabel" )
 		m.program_name.maxWidth = program_name_width
 		m.program_name.translation = [ 20 + channel_logo_width + 20, 20 ]
-		m.program_name.font = "font:LargeSystemFont"
+		m.program_name.font = CreateChineseFont( 32 )
 		row.AppendChild( m.program_name )
 		program_name_height = m.program_name.boundingRect()[ "height" ]
 
@@ -75,7 +75,7 @@ sub Init()
 		m.channel_name.width = channel_name_width
 		m.channel_name.numLines = 1
 		m.channel_name.translation = [ 20 + channel_logo_width + 20, 20 + program_name_height + 20 ]
-		m.channel_name.font = "font:SmallSystemFont"
+		m.channel_name.font = CreateChineseFont( 24 )
 		row.AppendChild( m.channel_name )
 		channel_name_height = m.channel_name.boundingRect()[ "height" ]
 
@@ -102,7 +102,7 @@ sub Init()
 			}
 			"default": {
 				"fontSize": 48
-				"fontUri": "font:LargeSystemFont"
+				"fontUri": GetChineseFontUri()
 				"color": "#FFFFFFFF"
 			}
 		}
@@ -129,7 +129,7 @@ sub Init()
 			m.progress_position_info.width = 300
 			m.progress_position_info.numLines = 1
 			m.progress_position_info.translation = [ 0, 20 ]
-			m.progress_position_info.font = "font:SmallSystemFont"
+			m.progress_position_info.font = CreateChineseFont( 24 )
 			progress_bar.AppendChild( m.progress_position_info )
 
 			m.progress_duration_info = CreateObject( "roSGNode", "Label" )
@@ -137,7 +137,7 @@ sub Init()
 			m.progress_duration_info.numLines = 1
 			m.progress_duration_info.translation = [ progress_bar.width - 300, 20 ]
 			m.progress_duration_info.horizAlign = "right"
-			m.progress_duration_info.font = "font:SmallSystemFont"
+			m.progress_duration_info.font = CreateChineseFont( 24 )
 			progress_bar.AppendChild( m.progress_duration_info )
 
 			progress_buttons = CreateObject( "roSGNode", "Rectangle" )
@@ -185,7 +185,7 @@ sub Init()
 		m.current_time.numLines = 1
 		m.current_time.translation = [ m.global.screen_width - current_time_width - 20, 20 ]
 		m.current_time.horizAlign = "right"
-		m.current_time.font = "font:LargeSystemFont"
+		m.current_time.font = CreateChineseFont( 32 )
 		m.current_time.text = m.time.asTimeStringLoc( "short" )
 		row.AppendChild( m.current_time )
 
@@ -522,7 +522,7 @@ sub UpdateProgramInfo()
 					date_time.FromSeconds( start_time )
 					time_string = date_time.asTimeStringLoc( "hh:mm a" ) + " - "
 					date_time.FromSeconds( end_time )
-					time_string = time_string + date_time.asTimeStringLoc( "hh:mm a" ) + " • " + FormatRuntime( end_time - start_time )' + " • "
+					time_string = time_string + date_time.asTimeStringLoc( "hh:mm a" ) + " " + chr( 8226 ) + " " + FormatRuntime( end_time - start_time )' + " • "
 
 					release_info.Push( time_string )
 				'}
@@ -605,7 +605,7 @@ sub UpdateProgramInfo()
 			release_info.Push( video_format )
 		'}
 		end if
-		m.channel_name.text = release_info.Join( " • " )
+		m.channel_name.text = release_info.Join( " " + chr( 8226 ) + " " )
 
 		m.program_name.text = program_name_text
 		m.program_description.text = program_description_text

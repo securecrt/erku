@@ -6,4 +6,5 @@
 		<field id="add_remove_favorite_state" type="integer" value="-1" alwaysnotify="true" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/ChannelOptions/ChannelOptions.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 </component>

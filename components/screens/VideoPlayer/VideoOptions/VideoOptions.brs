@@ -34,7 +34,7 @@ sub Init()
 	label.width = caption_label_width
 	label.translation = [ 20, 20 ]
 	label.horizAlign = "center"
-	label.font = "font:LargeSystemFont"
+	label.font = CreateChineseFont( 32 )
 	label.text = "Caption Modes"
 	m.panel.AppendChild( label )
 
@@ -42,7 +42,7 @@ sub Init()
 	label.width = label_width
 	label.translation = [ 20 + caption_label_width + 20, 20 ]
 	label.horizAlign = "center"
-	label.font = "font:LargeSystemFont"
+	label.font = CreateChineseFont( 32 )
 	label.text = "Subtitle Tracks"
 	m.panel.AppendChild( label )
 
@@ -50,7 +50,7 @@ sub Init()
 	label.width = label_width
 	label.translation = [ 20 + caption_label_width + 20 + label_width + 20, 20 ]
 	label.horizAlign = "center"
-	label.font = "font:LargeSystemFont"
+	label.font = CreateChineseFont( 32 )
 	label.text = "Audio Tracks"
 	m.panel.AppendChild( label )
 
@@ -80,7 +80,7 @@ sub Init()
 			m.caption_modes.height = label_height
 			m.caption_modes.translation = [ 20, 0 ]
 			m.caption_modes.vertAlign = "center"
-			m.caption_modes.font = "font:SmallSystemFont"
+			m.caption_modes.font = CreateChineseFont( 24 )
 
 		option_1.AppendChild( m.caption_modes )
 
@@ -105,7 +105,7 @@ sub Init()
 			m.subtitle_tracks.height = label_height
 			m.subtitle_tracks.translation = [ 20, 0 ]
 			m.subtitle_tracks.vertAlign = "center"
-			m.subtitle_tracks.font = "font:SmallSystemFont"
+			m.subtitle_tracks.font = CreateChineseFont( 24 )
 
 		option_2.AppendChild( m.subtitle_tracks )
 
@@ -130,7 +130,7 @@ sub Init()
 			m.audio_tracks.height = label_height
 			m.audio_tracks.translation = [ 20, 0 ]
 			m.audio_tracks.vertAlign = "center"
-			m.audio_tracks.font = "font:SmallSystemFont"
+			m.audio_tracks.font = CreateChineseFont( 24 )
 
 		option_3.AppendChild( m.audio_tracks )
 

@@ -46,10 +46,12 @@ sub Init()
 	m.drawing_styles = {
 		"red": {
 			"color": "#FF0000FF"
-			"fontUri": "font:SmallSystemFont"
+			"fontUri": GetChineseFontUri()
+			"fontSize": 24
 		}
 		"default": {
-			"fontUri": "font:SmallSystemFont"
+			"fontUri": GetChineseFontUri()
+			"fontSize": 24
 			"color": "#FFFFFFFF"
 		}
 	}
@@ -85,7 +87,7 @@ sub Init()
 			overscan.translation = [ 5, 0 ]
 			overscan.horizAlign = "center"
 			overscan.vertAlign = "center"
-			overscan.font = "font:SmallSystemFont"
+			overscan.font = CreateChineseFont( 24 )
 			overscan.text = "Top-Left"
 
 		column.AppendChild( overscan )
@@ -121,7 +123,7 @@ sub Init()
 			overscan.translation = [ 5, 0 ]
 			overscan.horizAlign = "center"
 			overscan.vertAlign = "center"
-			overscan.font = "font:SmallSystemFont"
+			overscan.font = CreateChineseFont( 24 )
 			overscan.text = "Bottom-Right"
 
 		column.AppendChild( overscan )
@@ -157,7 +159,7 @@ sub Init()
 			overscan.translation = [ 5, 0 ]
 			overscan.horizAlign = "center"
 			overscan.vertAlign = "center"
-			overscan.font = "font:SmallSystemFont"
+			overscan.font = CreateChineseFont( 24 )
 			overscan.text = "Reset"
 
 		column.AppendChild( overscan )
@@ -184,7 +186,7 @@ sub Init()
 			overscan.translation = [ 5, 0 ]
 			overscan.horizAlign = "center"
 			overscan.vertAlign = "center"
-			overscan.font = "font:SmallSystemFont"
+			overscan.font = CreateChineseFont( 24 )
 			overscan.text = "Apply"
 
 		column.AppendChild( overscan )

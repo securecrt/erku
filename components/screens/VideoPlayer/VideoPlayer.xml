@@ -7,6 +7,7 @@
 		<field id="details_content" type="node" value="invalid" onChange="OnDetailsContentChange" alwaysnotify="true" />
 	</interface>
 	<script type="text/brightscript" uri="pkg:/components/screens/VideoPlayer/VideoPlayer.brs" />
+	<script type="text/brightscript" uri="pkg:/components/fonts/FontHelper.brs" />
 	<children>
 		<Video id="Video" />
 		<Rectangle id="Background" />

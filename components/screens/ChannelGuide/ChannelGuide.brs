@@ -145,7 +145,7 @@ sub Init()
 		m.program_name = CreateObject( "roSGNode", "ScrollingLabel" )
 		m.program_name.maxWidth = program_name_width
 		m.program_name.translation = [ 20 + channel_logo_width + 20, 20 ]
-		m.program_name.font = "font:LargeSystemFont"
+		m.program_name.font = CreateChineseFont( 32 )
 		m.program_info.AppendChild( m.program_name )
 		program_name_height = m.program_name.boundingRect()[ "height" ]
 
@@ -154,7 +154,7 @@ sub Init()
 		m.channel_name.width = channel_name_width
 		m.channel_name.numLines = 1
 		m.channel_name.translation = [ 20 + channel_logo_width + 20, 20 + program_name_height + 20 ]
-		m.channel_name.font = "font:SmallSystemFont"
+		m.channel_name.font = CreateChineseFont( 24 )
 		m.program_info.AppendChild( m.channel_name )
 		channel_name_height = m.channel_name.boundingRect()[ "height" ]
 
@@ -164,7 +164,7 @@ sub Init()
 		m.program_description.numLines = 5
 		m.program_description.translation = [ 20 + channel_logo_width + 20, 20 + program_name_height + 20 + channel_name_height + 20 ]
 		m.program_description.wrap = true
-		m.program_description.font = "font:SmallestSystemFont"
+		m.program_description.font = CreateChineseFont( 20 )
 		m.program_info.AppendChild( m.program_description )
 
 	''''''''''''''''''''''''
@@ -185,7 +185,7 @@ sub Init()
 			time_bar_date.height = m.row_height
 			time_bar_date.translation = [ 20, 0 ]
 			time_bar_date.vertAlign = "center"
-			time_bar_date.font = "font:MediumSystemFont"
+			time_bar_date.font = CreateChineseFont( 28 )
 
 			time_bar_row.AppendChild( time_bar_date )
 
@@ -197,7 +197,7 @@ sub Init()
 				time_bar_date.translation = [ m.row_width + ( i * m.time_bar_column_width ), 0 ]
 				time_bar_date.horizAlign = "left"
 				time_bar_date.vertAlign = "center"
-				time_bar_date.font = "font:MediumSystemFont"
+				time_bar_date.font = CreateChineseFont( 28 )
 
 				time_bar_row.AppendChild( time_bar_date )
 			'}
@@ -258,7 +258,7 @@ sub Init()
 			name_label.height = m.row_height
 			name_label.translation = [ 20, 0 ]
 			name_label.vertAlign = "center"
-			name_label.font = "font:MediumSystemFont"
+			name_label.font = CreateChineseFont( 28 )
 			name_label.repeatCount = 0
 			row.AppendChild( name_label )
 
@@ -268,7 +268,7 @@ sub Init()
 			number_label.translation = [ 20 + name_label.maxWidth + 20, 0 ]
 			number_label.horizAlign = "right"
 			number_label.vertAlign = "center"
-			number_label.font = "font:MediumSystemFont"
+			number_label.font = CreateChineseFont( 28 )
 			row.AppendChild( number_label )
 
 		m.channels.AppendChild( row )
@@ -297,7 +297,7 @@ sub Init()
 					program.height = m.row_height
 					program.vertAlign = "center"
 					program.translation = [ 10, 0 ]
-					program.font = "font:SmallestSystemFont"
+					program.font = CreateChineseFont( 20 )
 
 					grid_rect.AppendChild( program )
 
@@ -787,7 +787,7 @@ sub UpdateProgramValues( row_index as integer, program_index as integer, text as
 				program.vertAlign = "center"
 				program.translation = [ 10, 0 ]
 				program.text = text
-				program.font = "font:SmallestSystemFont"
+				program.font = CreateChineseFont( 20 )
 
 				grid_rect.AppendChild( program )
 
@@ -983,7 +983,7 @@ sub UpdateProgramInfo( content_index as integer, program_index as integer, start
 				date.FromSeconds( start_time )
 				time_string = date.asTimeStringLoc( "hh:mm a" ) + " - "
 				date.FromSeconds( end_time )
-				time_string = time_string + date.asTimeStringLoc( "hh:mm a" ) + " • " + FormatRuntime( end_time - start_time ) + " • "
+				time_string = time_string + date.asTimeStringLoc( "hh:mm a" ) + " " + chr( 8226 ) + " " + FormatRuntime( end_time - start_time ) + " " + chr( 8226 ) + " "
 			'}
 			end if
 			m.channel_name.text = time_string + m.top.content.GetChild( content_index ).Title

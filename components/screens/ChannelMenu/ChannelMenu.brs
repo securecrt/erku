@@ -76,7 +76,7 @@ sub Init()
 			name_label.height = m.row_height
 			name_label.translation = [ 20, 0 ]
 			name_label.vertAlign = "center"
-			name_label.font = "font:MediumSystemFont"
+			name_label.font = CreateChineseFont( 28 )
 			name_label.repeatCount = 0
 			row.AppendChild( name_label )
 
@@ -86,7 +86,7 @@ sub Init()
 			number_label.translation = [ 20 + name_label.maxWidth + 20, 0 ]
 			number_label.horizAlign = "right"
 			number_label.vertAlign = "center"
-			number_label.font = "font:MediumSystemFont"
+			number_label.font = CreateChineseFont( 28 )
 			row.AppendChild( number_label )
 
 		m.container.AppendChild( row )

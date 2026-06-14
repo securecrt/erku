@@ -26,7 +26,7 @@ sub Init()
 	title.height = 75
 	title.translation = [ 0, 20 ]
 	title.horizAlign = "center"
-	title.font = "font:LargeBoldSystemFont"
+	title.font = CreateChineseFont( 36 )
 	title.text = "Channel Options"
 
 	m.container.AppendChild( title )
@@ -48,7 +48,8 @@ sub Init()
 			"color": "#FFFFFFFF"
 		}
 		"default": {
-			"fontUri": "font:SmallSystemFont"
+			"fontUri": GetChineseFontUri()
+			"fontSize": 24
 			"color": "#FFFFFFFF"
 		}
 	}

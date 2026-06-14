@@ -25,7 +25,7 @@ sub Init()
 	title.height = 100
 	title.horizAlign = "center"
 	title.vertAlign = "center"
-	title.font = "font:LargeBoldSystemFont"
+	title.font = CreateChineseFont( 36 )
 	title.text = "Options"
 
 	m.panel.AppendChild( title )
@@ -71,7 +71,8 @@ sub Init()
 			"color": "#FFFFFFFF"
 		}
 		"default": {
-			"fontUri": "font:SmallSystemFont"
+			"fontUri": GetChineseFontUri()
+			"fontSize": 24
 			"color": "#FFFFFFFF"
 		}
 	}
@@ -94,7 +95,7 @@ sub Init()
 		label.height = label_height
 		label.translation = [ 20, 20 ]
 		label.vertAlign = "center"
-		label.font = "font:SmallSystemFont"
+		label.font = CreateChineseFont( 24 )
 		label.text = "Feed URL:"
 
 	m.options_columns.AppendChild( label )
@@ -117,7 +118,7 @@ sub Init()
 			button.height = label_height
 			button.translation = [ 20, 0 ]
 			button.vertAlign = "center"
-			button.font = "font:SmallSystemFont"
+			button.font = CreateChineseFont( 24 )
 			button.text = m.global.feed_url
 			button.maxWidth = option_1.width - 40
 
@@ -186,7 +187,7 @@ sub Init()
 		label.height = label_height
 		label.translation = [ 20, 20 + y_offset ]
 		label.vertAlign = "center"
-		label.font = "font:SmallSystemFont"
+		label.font = CreateChineseFont( 24 )
 		label.text = "Sort channels by:"
 
 	m.options_columns.AppendChild( label )
@@ -346,7 +347,7 @@ sub Init()
 			button.height = label_height
 			button.translation = [ 20, 0 ]
 			button.vertAlign = "center"
-			button.font = "font:SmallSystemFont"
+			button.font = CreateChineseFont( 24 )
 			button.text = "Adjust Overscan Coordinates..."
 
 		option_6.width = button.boundingRect()[ "width" ] + 40

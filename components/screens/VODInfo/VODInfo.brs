@@ -75,7 +75,7 @@ sub Init()
 		m.vod_name = CreateObject( "roSGNode", "ScrollingLabel" )
 		m.vod_name.maxWidth = vod_name_width
 		m.vod_name.translation = [ 20 + vod_logo_width + 20, 20 ]
-		m.vod_name.font = "font:LargeSystemFont"
+		m.vod_name.font = CreateChineseFont( 32 )
 		row.AppendChild( m.vod_name )
 		vod_name_height = m.vod_name.boundingRect()[ "height" ]
 
@@ -84,7 +84,7 @@ sub Init()
 		m.vod_release_info.width = vod_time_width
 		m.vod_release_info.numLines = 1
 		m.vod_release_info.translation = [ 20 + vod_logo_width + 20, 20 + vod_name_height + 20 ]
-		m.vod_release_info.font = "font:SmallestSystemFont"
+		m.vod_release_info.font = CreateChineseFont( 20 )
 		row.AppendChild( m.vod_release_info )
 		vod_release_info_height = m.vod_release_info.boundingRect()[ "height" ]
 
@@ -93,7 +93,7 @@ sub Init()
 		m.vod_genres.width = vod_genres_width
 		m.vod_genres.numLines = 1
 		m.vod_genres.translation = [ 20 + vod_logo_width + 20, 20 + vod_name_height + 20 + vod_release_info_height + 20 ]
-		m.vod_genres.font = "font:SmallestSystemFont"
+		m.vod_genres.font = CreateChineseFont( 20 )
 		row.AppendChild( m.vod_genres )
 		vod_genres_height = m.vod_genres.boundingRect()[ "height" ]
 
@@ -102,7 +102,7 @@ sub Init()
 		m.vod_directors.width = vod_directors_width
 		m.vod_directors.numLines = 1
 		m.vod_directors.translation = [ 20 + vod_logo_width + 20, 20 + vod_name_height + 20 + vod_release_info_height + 20 + vod_genres_height + 20 ]
-		m.vod_directors.font = "font:SmallestSystemFont"
+		m.vod_directors.font = CreateChineseFont( 20 )
 		row.AppendChild( m.vod_directors )
 		vod_directors_height = m.vod_directors.boundingRect()[ "height" ]
 
@@ -144,7 +144,7 @@ sub Init()
 		m.actor_label.height = label_height
 		m.actor_label.translation = [ 20, 0 ]
 		m.actor_label.vertAlign = "center"
-		m.actor_label.font = "font:SmallestSystemFont"
+		m.actor_label.font = CreateChineseFont( 20 )
 		m.actors.AppendChild( m.actor_label )
 
 		for i = 0 to m.max_visible_actors - 1
@@ -193,7 +193,7 @@ sub Init()
 							label.translation = [ 10, 10 + card_poster_height ]
 							label.vertAlign = "center"
 							label.horizAlign = "center"
-							label.font = "font:SmallestSystemFont"
+							label.font = CreateChineseFont( 20 )
 							vod_actor_frame.AppendChild( label )
 
 						m.actor_cards.Push( vod_actor_frame )
@@ -458,7 +458,7 @@ sub OnDetailsContentChange()
 			release_info.Push( formatted_runtime )
 		'}
 		end if
-		m.vod_release_info.text = release_info.Join( " • " )
+		m.vod_release_info.text = release_info.Join( " " + chr( 8226 ) + " " )
 
 		m.vod_genres.text = m.top.details_content.Genres.Join( ", " )
 
